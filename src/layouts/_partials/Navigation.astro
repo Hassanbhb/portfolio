@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import face from '../../assets/face.jpg';
+
+const currentUrl = Astro.url.pathname;
+---
+<header class="mt-2">
+  <nav class="py-2 rounded-xl flex items-center justify-between w-full" aria-label="Main Navigation">
+    <div class="flex items-center gap-2">
+      <Image src={face} alt="logo"  class="max-w-12 rounded-full border border-slate-300"/>
+      <div class="flex flex-col">
+        <p class="font-medium">Hassan Ben Haj Bouih</p>
+        <!-- <small class="text-slate-800">@Hassanbhb</small> -->
+        <p class="text-slate-600 text-xs">Web developer @Technopek</p>
+      <!-- </div> -->
+      </div>
+    </div>
+    <!-- <ul class="flex text-sm">
+      <li><a href="/" class=`px-3 py-2 font-medium ${currentUrl === '/' ? 'bg-slate-100 rounded-xl' : ''}`>Home</a></li>
+      <li><a href="/contact" class=`px-3 py-2 font-medium ${currentUrl === '/contact' ? 'bg-slate-100 rounded-xl' : ''}`>Contact</a></li>
+    </ul> -->
+  </nav>
+</header>

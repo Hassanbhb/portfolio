@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+@theme {
+  --font-andika: "Source Serif 4", "sans-serif";
+
+  --color-sky-50: #eef8fc;
+  --color-sky-100: #e0f3fa;
+  --color-sky-200: #c2e6f5;
+  --color-sky-300: #a8dcf0;
+  --color-sky-400: #8ed1ec;
+  --color-sky-500: #71c5e7;
+  --color-sky-600: #36aedd;
+  --color-sky-700: #1e89b3;
+  --color-sky-800: #145a76;
+  --color-sky-900: #0a2f3d;
+  --color-sky-950: #05171f;
+}

@@ -1,14 +1,24 @@
+---
+import "../styles/global.css";
+import Navigation from "./_partials/Navigation.astro"
+import Head from "./Head.astro"
+---
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<Head />
 	</head>
-	<body>
-		<slot />
+	<body class="bg-sky-50/10 text-sky-950 text-sm font-andika">
+		<div class="max-w-xl mx-auto space-y-2">
+			<Navigation />
+			<main>
+				<slot />
+			</main>
+		</div>
 	</body>
 </html>
 

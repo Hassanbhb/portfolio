@@ -9,6 +9,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.8.1"
+    "@alpinejs/collapse": "^3.14.9",
+    "@astrojs/alpinejs": "^0.4.8",
+    "@tailwindcss/vite": "^4.1.8",
+    "@types/alpinejs": "^3.13.11",
+    "alpinejs": "^3.14.9",
+    "astro": "^5.8.1",
+    "tailwindcss": "^4.1.8"
+  },
+  "devDependencies": {
+    "wrangler": "^4.19.1"
   }
 }

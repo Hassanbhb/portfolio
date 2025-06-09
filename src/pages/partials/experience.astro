@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import Technopek from '../../assets/technopek.svg'
+import Tekknow from '../../assets/tekknow.svg'
+---
+
+<section class="rounded-xl py-2">
+  <h1 class="text-xs font-medium text-slate-400 mb-5">Work</h1>
+    <div x-data="{ 
+        activeAccordion: 'accordion-1', 
+        setActiveAccordion(id) { 
+            this.activeAccordion = (this.activeAccordion == id) ? '' : id 
+        } 
+    }" class="relative w-full text-sm font-normal space-y-2">
+        <div x-data="{ id: 'accordion-1' }" :class="{ 'text-neutral-900': activeAccordion==id, 'text-neutral-600 hover:text-neutral-900': activeAccordion!=id }" class="cursor-pointer group">
+            <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-2 rounded-xl transition-all text-left select-none cursor-pointer hover:bg-sky-50">
+              <div class="space-y-1">
+                <Image src={Technopek} alt="logo" class="col-span-2 w-16"/>
+                <h2 class="text-xs font-medium">Web Developer</h2>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs text-slate-400">2024 - present</span>  
+                <svg class="w-5 h-5 duration-300 ease-out" :class="{ '-rotate-[45deg]': activeAccordion==id }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" /></svg>
+              </div>
+            </button>
+            <div x-show="activeAccordion==id" x-collapse x-cloak>
+                <ul class="list-disc pl-6 mt-2 mb-4 text-sky-950">
+                  <li>Back-end and Front-end developer. working with the team to build <a href="https://codrocket.com/en/" target="_blank" class="underline text-sky-700">CodRocket</a> a cash-on-delivery system for businesses.</li>
+                  <li>Built internal systems to streamline the everyday operations ( CRM, invoicing... ) of the agency.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div x-data="{ id: 'accordion-2' }" :class="{ 'text-neutral-900': activeAccordion==id, 'text-neutral-600 hover:text-neutral-900': activeAccordion!=id }" class="cursor-pointer group">
+            <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-2 rounded-xl transition-all text-left select-none cursor-pointer hover:bg-sky-50">
+              <div class="space-y-1">
+                <Image src={Tekknow} alt="logo" class="col-span-2 w-16"/>
+                <h2 class="text-xs font-medium">Web Developer <span class="text-xs text-slate-400">- internship</span></h2>
+              </div>
+              <svg class="w-5 h-5 duration-300 ease-out" :class="{ '-rotate-[45deg]': activeAccordion==id }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" /></svg>
+            </button>
+            <div x-show="activeAccordion==id" x-collapse x-cloak>
+              <ul class="list-disc pl-6 mt-2 text-sky-950">
+                <li>Development of components, routing and CRUD operations</li>
+                <li>Implementation of administration functionalities, including user verification and support ticket management</li>
+                <li>Design and implementation of landing pages and authentication pages.</li>
+              </ul>
+            </div>
+        </div>
+    </div>
+
+</section>
