@@ -12,7 +12,7 @@ import Tekknow from '../../assets/tekknow.svg'
             this.activeAccordion = (this.activeAccordion == id) ? '' : id 
         } 
     }" class="relative w-full text-sm font-normal space-y-2">
-        <div x-data="{ id: 'accordion-1' }" :class="{ 'text-neutral-900': activeAccordion==id, 'text-neutral-600 hover:text-neutral-900': activeAccordion!=id }" class="cursor-pointer group">
+        <div x-data="{ id: 'accordion-1' }" :class="{ 'text-neutral-900': activeAccordion==id, 'text-neutral-600 hover:text-neutral-900': activeAccordion!=id }" class="group">
             <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-2 rounded-xl transition-all text-left select-none cursor-pointer hover:bg-sky-50">
               <div class="space-y-1">
                 <Image src={Technopek} alt="logo" class="col-span-2 w-16"/>
@@ -31,7 +31,7 @@ import Tekknow from '../../assets/tekknow.svg'
             </div>
         </div>
 
-        <div x-data="{ id: 'accordion-2' }" :class="{ 'text-neutral-900': activeAccordion==id, 'text-neutral-600 hover:text-neutral-900': activeAccordion!=id }" class="cursor-pointer group">
+        <div x-data="{ id: 'accordion-2' }" :class="{ 'text-neutral-900': activeAccordion==id, 'text-neutral-600 hover:text-neutral-900': activeAccordion!=id }" class="group">
             <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-2 rounded-xl transition-all text-left select-none cursor-pointer hover:bg-sky-50">
               <div class="space-y-1">
                 <Image src={Tekknow} alt="logo" class="col-span-2 w-16"/>

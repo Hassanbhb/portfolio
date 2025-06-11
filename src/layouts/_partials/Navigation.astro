@@ -1,8 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import face from '../../assets/face.jpg';
-
-const currentUrl = Astro.url.pathname;
 ---
 <header class="mt-2">
   <nav class="py-2 rounded-xl flex items-center justify-between w-full" aria-label="Main Navigation">
@@ -15,9 +13,24 @@ const currentUrl = Astro.url.pathname;
       <!-- </div> -->
       </div>
     </div>
-    <!-- <ul class="flex text-sm">
-      <li><a href="/" class=`px-3 py-2 font-medium ${currentUrl === '/' ? 'bg-slate-100 rounded-xl' : ''}`>Home</a></li>
-      <li><a href="/contact" class=`px-3 py-2 font-medium ${currentUrl === '/contact' ? 'bg-slate-100 rounded-xl' : ''}`>Contact</a></li>
-    </ul> -->
+
+    <div class="relative inline-flex items-center justify-center gap-4 group">
+      <div
+        class="absolute inset-0 duration-1000 opacity-60 transitiona-all bg-gradient-to-r from-sky-400 via-sky-400 to-sky-400 rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"
+      ></div>
+      <a
+        role="button"
+        class="group relative inline-flex items-center justify-center text-xs bg-sky-50 backdrop-blur-xs px-4 py-2 rounded-xl font-medium text-sky-950 transition-all duration-500"
+        href="/cv-hassanbenhajbouih-en.pdf"
+        target="_blank"
+        >
+        CV / Resume
+        <svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 ml-2 -mr-1 stroke-sky-950 stroke-2"  width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-arrow-out-up-right-icon lucide-square-arrow-out-up-right">
+          <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/>
+          <path class="transition duration-500 group-hover:-translate-y-[1.5px] group-hover:translate-x-[1.5px]" d="m21 3-9 9"/>
+          <path class="transition duration-500 group-hover:-translate-y-[1.5px] group-hover:translate-x-[1.5px]" d="M15 3h6v6"/>
+        </svg>
+      </a>
+    </div>
   </nav>
 </header>
