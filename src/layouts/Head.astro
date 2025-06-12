@@ -1,6 +1,5 @@
 ---
-import SeoBanner from '../assets/seo_banner.webp'
-
+import { Font } from 'astro:assets';
 const { title = "Hassan Ben Haj Bouih - portfolio", ...props } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -34,6 +33,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <meta name="twitter:image" content="/seo_banner.webp" />
 <meta name="twitter:image:alt" content="Hassan ben haj bouih website as a web developer" />
 
+<Font cssVariable="--font-sora" preload />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

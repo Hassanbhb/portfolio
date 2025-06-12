@@ -1,9 +1,8 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 
-@theme {
-  --font-sora: "Sora", "sans-serif";
+@theme inline{
 
+  --font-sora: var(--font-sora);
   --color-sky-50: #eef8fc;
   --color-sky-100: #e0f3fa;
   --color-sky-200: #c2e6f5;
